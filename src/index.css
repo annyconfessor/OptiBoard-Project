@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-gray-900;
+}
+
+@font-face {
+  font-family: 'Rubik', sans-serif;
+  /* src: url('./assets/fonts/Rubik-VariableFont_wght.ttf') format('truetype'); */
+}
+
+@font-face {
+  font-family: 'DM Sans', sans-serif;
+  /* src: url('./assets/fonts/DMSans-VariableFont_opsz\,wght.ttf') format('truetype'); */
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+}
