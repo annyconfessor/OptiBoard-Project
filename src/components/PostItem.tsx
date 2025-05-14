@@ -3,7 +3,9 @@ import type { PostType } from "../types/posts.type"
 
 export default function PostItem({ body, id, title }: PostType) {
   const [valueTitle, setValueTitle] = useState(title)
-  const [isEditing, setIsEditing] = useState(false)
+  const [isEditingTitle, setIsEditingTitle] = useState(false)
+  const [valueBody, setValueBody] = useState(body)
+  const [isEditingBody, setIsEditingBody] = useState(false)
 
   return (
     <tr className="hover:bg-gray-200 transition duration-200 ease-in-out">
@@ -12,21 +14,41 @@ export default function PostItem({ body, id, title }: PostType) {
       {/* edit title */}
 
       <td className="px-3 py-4 whitespace-nowrap text-sm text-gray-600 md:px-6">
-        {isEditing &&
+        {isEditingTitle &&
         <input 
         type="text" 
-        className="edit-input w-full border rounded px-1 py-2"
+        className="edit-input w-full rounded bg-transparent focus:outline-none focus:ring-0"
         value={valueTitle}
         onChange={(e) => setValueTitle(e.target.value)}
-        onBlur={() => setIsEditing(false)}
+        onBlur={() => setIsEditingTitle(false)}
         />}
-        <span className="edit-data-field" onClick={() => setIsEditing(true)}>{valueTitle}</span>
+        <span 
+        className={`edit-data-field cursor-pointer ${
+          !isEditingTitle && !valueTitle ? "text-gray-400 italic" : ""
+        }`}
+        onClick={() => setIsEditingTitle(true)}>
+        {isEditingTitle ? '' : valueTitle ? valueTitle : 'Clique aqui para editar'}
+        </span>
       </td>
 
-      <td className="px-3 py-4 whitespace-nowrap text-sm text-gray-600 md:px-6">{body}</td>
-      <td>
-        <button className="text-blue-400">Editar</button>
-        <button className="ml-4 text-red-400">Excluir</button>
+      {/* edit body */}
+
+      <td className="px-3 py-4 whitespace-nowrap text-sm text-gray-600 md:px-6">
+      {isEditingBody &&
+        <input 
+        type="text" 
+        className="edit-input w-full rounded bg-transparent focus:outline-none focus:ring-0"
+        value={valueBody}
+        onChange={(e) => setValueBody(e.target.value)}
+        onBlur={() => setIsEditingBody(false)}
+        />}
+        <span 
+        className={`edit-data-field cursor-pointer ${
+          !isEditingBody && !valueBody ? "text-gray-400 italic" : ""
+        }`}
+        onClick={() => setIsEditingBody(true)}>
+        {isEditingBody ? '' : valueBody ? valueBody : 'Clique aqui para editar'}
+        </span>
       </td>
     </tr>
   )

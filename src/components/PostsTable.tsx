@@ -11,7 +11,7 @@ export default function PostsTable({ data }: PostsTableProps) {
     <div className="overflow-x-auto rounded-lg border border-slate-700 bg-[#2c3e47] shadow-lgmax-w-4xl">
       <table className="min-w-full">
         <thead className="bg-[#2c3e47]">
-          <tr className="hover:bg-[#405661] transition duration-200 ease-in-out">
+          <tr>
             <th className="px-3 py-3 text-left text-xs font-semibold text-[#ccfdfa] uppercase tracking-wider md:px-6">ID</th>
             <th className="px-3 py-3 text-left text-xs font-semibold text-[#ccfdfa] uppercase tracking-wider md:px-6">Título</th>
             <th className="px-3 py-3 text-left text-xs font-semibold text-[#ccfdfa] uppercase tracking-wider md:px-6">Descrição</th>
