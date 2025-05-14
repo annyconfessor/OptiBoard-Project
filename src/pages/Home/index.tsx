@@ -1,28 +1,41 @@
-import { Suspense, useEffect, useState } from 'react';
-import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import { Suspense, useCallback, useEffect, useState } from 'react'
+import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 
 import PostsTable from '../../components/PostsTable'
 
-import type { PostType } from '../../types/posts.type';
+import type { PostType } from '../../types/posts.type'
 
 import * as TypicodeAPI from '../../services/typicode.service'
+import Input from '../../components/Input'
+import useDebounce from '../../hooks/useDebounce'
 
 const Home = () => {
   const [posts, setPosts] = useState<PostType[]>([])
 
+  const handlePostsRequest = useCallback(async (search: string = '') => {
+    const response = await TypicodeAPI.getPosts(search);
+
+    setPosts(response);
+  }, []);
+
   useEffect(() => {
-    const fetchData = async () => {
-      const response = await TypicodeAPI.getPosts();
+    handlePostsRequest();
+  }, [handlePostsRequest])
 
-      setPosts(response);
-    }
+  const debouncedSearch = useDebounce(handlePostsRequest, 500)
 
-    fetchData();
-  }, [])
+  const handleSearch = (search: string) => {
+    debouncedSearch(search);
+  }
 
   return (
     <Suspense fallback={<AiOutlineLoading3Quarters />}>
-      <PostsTable data={posts} />
+      <div className='w-full flex-col'>
+        <div className='mb-5'>
+          <Input onChange={handleSearch} />
+        </div>
+        <PostsTable data={posts} />
+      </div>
     </Suspense>
   );
 };
