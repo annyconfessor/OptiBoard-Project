@@ -33,6 +33,7 @@ export default {
   //       500: '#f97316',
   //     },
   //     sky: {
+  //       cyan: '#ccfdfa', 
   //       50: '#f0f9ff',
   //       100: '#e0f2fe',
   //       200: '#bae6fd',
@@ -45,8 +46,8 @@ export default {
   //       950: '#082f49',
   //       951: '#20344B',
   //     },
-  //     rose: {
-  //       500: '#f43f5e',
+  //     error: {
+  //       500: '#f75f6c',
   //     }
   //   },
   //   fontFamily: {
@@ -59,4 +60,9 @@ export default {
   // },
   plugins: [],
 }
+
+
+// #2c3e47
+// #ccfdfa
+// error #f75f6c
 

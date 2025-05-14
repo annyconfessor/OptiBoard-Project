@@ -11,8 +11,23 @@ const apiRequest = async <T,>(endpoint: string, options?: RequestInit): Promise<
   }
 
   return response.json();
-};
+}
 
 export const getPosts = () => {
-  return apiRequest<PostType[]>('/posts');
-};
+  return apiRequest<PostType[]>('/posts')
+}
+
+export const updatePost = () => {
+  return apiRequest<PostType[]>('/posts/1', {
+    method: 'PUT',
+    body: JSON.stringify({
+      id: 1,
+      title: 'foo',
+      body: 'bar',
+      userId: 1
+    }),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  })
+}

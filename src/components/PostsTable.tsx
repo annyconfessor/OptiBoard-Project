@@ -8,17 +8,17 @@ interface PostsTableProps {
 
 export default function PostsTable({ data }: PostsTableProps) {
   return (
-    <div className="overflow-x-auto rounded-lg border border-gray-200 max-w-4xl">
-      <table className="min-w-full divide-y divide-gray-200">
-        <thead className="bg-gray-50">
-          <tr>
-            <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider md:px-6">ID</th>
-            <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider md:px-6">Título</th>
-            <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider md:px-6">Descrição</th>
+    <div className="overflow-x-auto rounded-lg border border-slate-700 bg-[#2c3e47] shadow-lgmax-w-4xl">
+      <table className="min-w-full">
+        <thead className="bg-[#2c3e47]">
+          <tr className="hover:bg-[#405661] transition duration-200 ease-in-out">
+            <th className="px-3 py-3 text-left text-xs font-semibold text-[#ccfdfa] uppercase tracking-wider md:px-6">ID</th>
+            <th className="px-3 py-3 text-left text-xs font-semibold text-[#ccfdfa] uppercase tracking-wider md:px-6">Título</th>
+            <th className="px-3 py-3 text-left text-xs font-semibold text-[#ccfdfa] uppercase tracking-wider md:px-6">Descrição</th>
           </tr>
         </thead>
 
-        <tbody className="bg-white divide-y divide-gray-200">
+        <tbody className="bg-gray-100 divide-y divide-gray-200">
           {data.map((post) => (
             <PostItem key={`post-${post.id}`} {...post} />
           ))}
