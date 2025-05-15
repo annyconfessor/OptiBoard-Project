@@ -6,7 +6,7 @@ type RouterProps = {
 };
 
 export const RouterContainer = ({ children }: RouterProps) => (
-  <div className="bg-[#1a202c] p-8 h-full">
+  <div className="bg-[#1a202c] p-8 h-[100vh] flex justify-center">
     <BrowserRouter>{children}</BrowserRouter>
   </div>
 );

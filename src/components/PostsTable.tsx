@@ -10,11 +10,11 @@ export default function PostsTable({ data }: PostsTableProps) {
   return (
     <div className="overflow-x-auto rounded-lg border border-slate-700 bg-[#2c3e47] shadow-lgmax-w-4xl">
       <table className="min-w-full">
-        <thead className="bg-[#2c3e47]">
+        <thead className="bg-[#5db6e3]">
           <tr>
-            <th className="px-3 py-3 text-left text-xs font-semibold text-[#ccfdfa] uppercase tracking-wider md:px-6">ID</th>
-            <th className="px-3 py-3 text-left text-xs font-semibold text-[#ccfdfa] uppercase tracking-wider md:px-6">Título</th>
-            <th className="px-3 py-3 text-left text-xs font-semibold text-[#ccfdfa] uppercase tracking-wider md:px-6">Descrição</th>
+            <th className="px-3 py-3 text-left text-xs font-semibold text-[#151a53] uppercase tracking-wider md:px-6">ID</th>
+            <th className="px-3 py-3 text-left text-xs font-semibold text-[#151a53] uppercase tracking-wider md:px-6">Título</th>
+            <th className="px-3 py-3 text-left text-xs font-semibold text-[#151a53] uppercase tracking-wider md:px-6">Descrição</th>
           </tr>
         </thead>
 

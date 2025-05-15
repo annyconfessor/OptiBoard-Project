@@ -1,31 +1,32 @@
 import { Suspense, useCallback, useEffect, useState } from 'react'
 import { AiOutlineLoading3Quarters } from 'react-icons/ai'
 
-import PostsTable from '../../components/PostsTable'
-
 import type { PostType } from '../../types/posts.type'
 
 import * as TypicodeAPI from '../../services/typicode.service'
+
+import PostsTable from '../../components/PostsTable'
 import Input from '../../components/Input'
 import useDebounce from '../../hooks/useDebounce'
+import EmptyData from '../../components/EmptyData'
 
 const Home = () => {
   const [posts, setPosts] = useState<PostType[]>([])
 
   const handlePostsRequest = useCallback(async (search: string = '') => {
-    const response = await TypicodeAPI.getPosts(search);
+    const response = await TypicodeAPI.getPosts(search)
 
-    setPosts(response);
-  }, []);
+    setPosts(response)
+  }, [])
 
   useEffect(() => {
-    handlePostsRequest();
+    handlePostsRequest()
   }, [handlePostsRequest])
 
   const debouncedSearch = useDebounce(handlePostsRequest, 500)
 
   const handleSearch = (search: string) => {
-    debouncedSearch(search);
+    debouncedSearch(search)
   }
 
   return (
@@ -34,7 +35,7 @@ const Home = () => {
         <div className='mb-5'>
           <Input onChange={handleSearch} />
         </div>
-        <PostsTable data={posts} />
+        {posts.length ? <PostsTable data={posts} /> : <EmptyData />}
       </div>
     </Suspense>
   );
