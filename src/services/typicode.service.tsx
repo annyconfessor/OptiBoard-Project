@@ -7,15 +7,24 @@ export const apiRequest = async <T,>(endpoint: string, options?: RequestInit): P
   const response = await fetch(url, options);
 
   if (!response.ok) {
-    throw new Error(`API request failed: ${response.status}`);
+    throw new Error(`API request failed: ${response.status}`)
   }
 
-  return response.json();
+  return response.json()
 }
 
 export const getPosts = (search: string) => {
-  const params = { title_like: search, body_like: search };
-  const queryParams = new URLSearchParams(params).toString();
+  const titleParam = { title_like: search }
+  const bodyParam = { body_like: search }
+  // const params = { title_like: search, body_like: search }
 
-  return apiRequest<PostType[]>('/posts' + (search.length ? `?${queryParams}` : ''));
+  const queryTitleParam = new URLSearchParams(titleParam).toString()
+  const queryBodyParam = new URLSearchParams(bodyParam).toString()
+  // const queryParams = new URLSearchParams(params).toString()
+
+  console.log(queryTitleParam)
+  console.log(queryBodyParam)
+  
+  // return apiRequest<PostType[]>('/posts' + (search.length ? `?${queryParams}` : ''))
+  return apiRequest<PostType[]>('/posts' + (search.length ? `?${queryTitleParam}` : ''))
 }
