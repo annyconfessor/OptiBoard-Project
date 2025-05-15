@@ -12,9 +12,9 @@ export default function PostsTable({ data }: PostsTableProps) {
       <table className="min-w-full">
         <thead className="bg-[#5db6e3]">
           <tr>
-            <th className="px-3 py-3 text-left text-xs font-semibold text-[#151a53] uppercase tracking-wider md:px-6">ID</th>
-            <th className="px-3 py-3 text-left text-xs font-semibold text-[#151a53] uppercase tracking-wider md:px-6">Título</th>
-            <th className="px-3 py-3 text-left text-xs font-semibold text-[#151a53] uppercase tracking-wider md:px-6">Descrição</th>
+            <th className="font-playfair py-3 w-1/14 text-left text-[12.5px] font-semibold text-[#151a53] uppercase tracking-wider md:px-6">ID</th>
+            <th className="font-playfair w-3/12 text-left text-[12.5px] font-semibold text-[#151a53] uppercase tracking-wider md:px-2">Título</th>
+            <th className="font-playfair w-8/12 text-left text-[12.5px] font-semibold text-[#151a53] uppercase tracking-wider md:px-6">Descrição</th>
           </tr>
         </thead>
 

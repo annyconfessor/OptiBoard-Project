@@ -9,11 +9,9 @@ export default function PostItem({ body, id, title }: PostType) {
 
   return (
     <tr className="hover:bg-gray-200 transition duration-200 ease-in-out">
-      <td className="px-3 py-4 whitespace-nowrap text-sm text-gray-600 md:px-6">{id}</td>
+      <td className="font-poppins w-1/12 px-3 py-4 whitespace-nowrap text-sm text-gray-600 md:px-6">{id}</td>
 
-      {/* edit title */}
-
-      <td className="px-3 py-4 whitespace-nowrap text-sm text-gray-600 md:px-6">
+      <td className="font-poppins w-3/12 truncate max-w-[300px] whitespace-nowrap text-sm text-gray-600 md:px-2">
         {isEditingTitle &&
         <input 
         type="text" 
@@ -31,9 +29,7 @@ export default function PostItem({ body, id, title }: PostType) {
         </span>
       </td>
 
-      {/* edit body */}
-
-      <td className="px-3 py-4 whitespace-nowrap text-sm text-gray-600 md:px-6">
+      <td className="font-poppins w-8/12 truncate max-w-[300px] whitespace-nowrap text-sm text-gray-600 md:px-6">
       {isEditingBody &&
         <input 
         type="text" 

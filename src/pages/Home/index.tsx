@@ -38,7 +38,7 @@ const Home = () => {
   }
 
   const Loading = () => {
-    return <h2 className='text-gray-300'>🌀 Loading...</h2>
+    return <h2 className='font-poppins text-gray-300'>🌀 Loading...</h2>
   }
 
   return (
@@ -49,12 +49,12 @@ const Home = () => {
         {isLoading ? <Loading /> : posts.length ? (
         <>
           <PostsTable data={paginetedPosts} /> 
-          <div className="flex justify-center mt-6 gap-2 flex-wrap">
+          <div className="flex justify-center mt-2 gap-2 flex-wrap">
             {Array.from({ length: totalPages }).map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentPage(index)}
-                className={`px-2 py-1/2 rounded ${
+                className={`font-poppins px-2 py-1/2 rounded ${
                   currentPage === index
                     ? 'bg-[#5db6e3] text-[#151a53]'
                     : 'bg-gray-200 text-gray-400 hover:bg-blue-100'

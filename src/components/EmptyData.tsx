@@ -6,8 +6,8 @@ const EmptyData = () => {
         alt="No data"
         className="w-1/5 h-auto mb-4"
       />
-      <h2 className="text-xl font-semibold text-gray-700">Nenhum dado encontrado</h2>
-      <p className="text-gray-500">Por favor, tente novamente :)</p>
+      <h2 className="font-poppins text-xl font-semibold text-gray-700">Nenhum dado encontrado</h2>
+      <p className="font-inter text-gray-500">Por favor, tente novamente :)</p>
     </div>
   )  
 }

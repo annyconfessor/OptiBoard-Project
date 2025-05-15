@@ -4,7 +4,7 @@ type SearchInputProps = {
   onChange: (searchTerm: string) => void
 }
 
-const SearchInput = ({ onChange }: SearchInputProps) => {
+const Input = ({ onChange }: SearchInputProps) => {
 
   return(
     <div className="flex justify-center w-full">
@@ -15,11 +15,11 @@ const SearchInput = ({ onChange }: SearchInputProps) => {
         <input 
         onChange={(e) => onChange(e.target.value)}
         type="text"
-        className="w-full py-2 pl-10 px-3 border-none bg-gray-600 text-gray-200 rounded-[10px] focus:outline-none" 
+        className="font-poppins w-full py-2 pl-10 px-3 border-none bg-gray-600 text-gray-200 rounded-[10px] focus:outline-none" 
         placeholder="Search"></input>
       </div>
     </div>
   )
 }
 
-export default SearchInput
+export default Input
