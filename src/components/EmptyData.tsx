@@ -1,8 +1,10 @@
+import noDataImage from '../assets/not-found.png'
+
 const EmptyData = () => {
   return (
     <div className="flex flex-col items-center justify-center h-full pb-20">
       <img
-        src="src/assets/not-found.png"
+        src={noDataImage}
         alt="No data"
         className="w-1/5 h-auto mb-4"
       />
