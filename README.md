@@ -1,54 +1,41 @@
-# React + TypeScript + Vite
+# 🧠 Optiboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Optiboard** é um painel visual simples e intuitivo para organizar postagens.  
+Hoje, é apenas uma tabela simples, mas será ideal para criadores de conteúdo, social media ou qualquer pessoa que deseje visualizar ideias de forma clara.
 
-Currently, two official plugins are available:
+Acesse a [página inicial](https://optiboard-project.surge.sh/) para entender o projeto e testar a tabela de organização.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Funcionalidades atuais
 
-## Expanding the ESLint configuration
+- Organização de postagens em formato de tabela.
+- Interface leve e responsiva.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🌱 Próximos passos (visão futura)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Salvamento automático com login.
+- Tags, datas e categorias personalizadas.
+- Compartilhamento de quadros com colaboradores.
+- Modo claro e outras personalizações visuais.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠️ Tecnologias
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Este projeto foi criado com:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/) – para animações
+
+## 📂 Estrutura
+
+- `src/pages/Home.tsx` → Página inicial institucional.
+- `src/pages/Dashboard.tsx` → Quadro/tabela para organização de postagens.
+
+## 💻 Instalação local
+
+```bash
+git clone https://github.com/annyconfessor/optiboard.git
+cd optiboard
+npm install
+npm run dev
