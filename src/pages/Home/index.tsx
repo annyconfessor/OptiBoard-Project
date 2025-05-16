@@ -1,7 +1,9 @@
 import { motion } from "framer-motion"
 import Button from "../../components/Button"
+import { useNavigate } from "react-router-dom"
 
-export default function HomePage() {
+const HomePage = () => {
+  const navigate = useNavigate()
   return (
     <main className="homeee h-full bg-[#1a202c] text-gray-300 flex flex-col items-center justify-center px-6 py-12">
       <section className="max-w-3xl text-center space-y-6">
@@ -37,9 +39,11 @@ export default function HomePage() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.4, delay: 0.6 }}
         >
-          <Button onClick={() => window.location.href = "/dashboard"}>Ir para Dashboard</Button>
+          <Button onClick={() => navigate('/dashboard')}>Ir para Dashboard</Button>
         </motion.div>
       </section>
     </main>
   )
 }
+
+export default HomePage
