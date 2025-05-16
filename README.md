@@ -3,7 +3,8 @@
 **Optiboard** é um painel visual simples e intuitivo para organizar postagens.  
 Hoje, é apenas uma tabela simples, mas será ideal para criadores de conteúdo, social media ou qualquer pessoa que deseje visualizar ideias de forma clara.
 
-Acesse a [página inicial](https://optiboard-project.surge.sh/) para entender o projeto e testar a tabela de organização.
+Acesse a [página inicial](http://optiboard.surge.sh/) para entender o projeto e testar a tabela de organização.
+Loom para video de tela: [Gravação de tela](https://www.loom.com/share/4f91c61e9e9b4ce6b52af75f0596592a?sid=66a94299-c7d3-4bd3-bbdc-d3a509aace61)
 
 ## 🧩 Funcionalidades implementadas
 
@@ -39,6 +40,7 @@ Este projeto foi criado com:
 - [Vite](https://vitejs.dev/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
+- [Surge](https://surge.sh/)
 
 ## 📂 Estrutura
 
